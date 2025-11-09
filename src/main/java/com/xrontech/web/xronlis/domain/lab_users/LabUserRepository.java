@@ -14,10 +14,10 @@ import java.util.Optional;
 
 @Repository
 public interface LabUserRepository extends JpaRepository<LabUser, Long> {
-    // List<LabUser> findByUserId(Long user);
-    // List<LabUser> findByUser_Email(String email);
-    // List<LabUser> findByLab_Mobile(String mobile);
+    List<LabUser> findByUserId(Long user);
+    List<LabUser> findByUser_Email(String email);
+    List<LabUser> findByLab_Mobile(String mobile);
 
-    // Optional<LabUser> findByUserIdAndLabIdAndUser_UserRole(Long userId, Long labId,UserRole userUserRole);
-    // Optional<LabUser> findByLabIdAndUser_UserRole(Long labId,UserRole userUserRole);
+    Optional<LabUser> findByUserIdAndLabIdAndUser_UserRole(Long userId, Long labId,UserRole userUserRole);
+    Optional<LabUser> findByLabIdAndUser_UserRole(Long labId,UserRole userUserRole);
 }
