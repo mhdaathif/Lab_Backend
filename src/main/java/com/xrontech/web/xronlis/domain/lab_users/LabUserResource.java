@@ -37,15 +37,15 @@ public class LabUserResource {
     }
 
     // delete lab user - for admin
-    // @DeleteMapping("/delete/{lab-user-id}")
-    // public ResponseEntity<ApplicationResponseDTO> deleteLabUser(@PathVariable("lab-user-id") Long labUserId) {
-    //     return ResponseEntity.ok(labUserService.deleteLabUser(labUserId));
-    // }
+    @DeleteMapping("/delete/{lab-user-id}")
+    public ResponseEntity<ApplicationResponseDTO> deleteLabUser(@PathVariable("lab-user-id") Long labUserId) {
+        return ResponseEntity.ok(labUserService.deleteLabUser(labUserId));
+    }
 
     // get single lab user - for admin && own profile as a lab user
-    // @GetMapping("/get/{lab-user-id}")
-    // public ResponseEntity<User> getLabUserById(@PathVariable("lab-user-id") Long labUserId) {
-    //     return ResponseEntity.ok(labUserService.getLabUserById(labUserId));
-    // }
+    @GetMapping("/get/{lab-user-id}")
+    public ResponseEntity<User> getLabUserById(@PathVariable("lab-user-id") Long labUserId) {
+        return ResponseEntity.ok(labUserService.getLabUserById(labUserId));
+    }
 
 }
