@@ -1,7 +1,7 @@
 package com.xrontech.web.xronlis.domain.patient;
 
-import com.xrontech.web.xronlis.domain.report.Report;
-import com.xrontech.web.xronlis.domain.report.ReportRepository;
+// import com.xrontech.web.xronlis.domain.report.Report;
+// import com.xrontech.web.xronlis.domain.report.ReportRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ import java.util.Random;
 public class PatientService {
     private final PatientRepository patientRepository;
     private final Random random = new Random();
-    private final ReportRepository reportRepository;
+    // private final ReportRepository reportRepository;
 
     // Generate a 6-digit OTP
     public String generateOtp() {
